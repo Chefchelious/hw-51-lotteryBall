@@ -3,7 +3,7 @@ import Ball from "./RandomBall/RandomBall";
 import './App.css';
 
 const App = () => {
-  const [numbers, setNumbers] = useState<number[]>([]);
+  const [numbers, setNumbers] = useState<number[]>([0, 0, 0, 0, 0]);
 
   const changeNumber = () => {
     const numbers: number[] = [];
@@ -21,7 +21,11 @@ const App = () => {
   return (
       <div className="App">
         <div className="container">
-          {numbers.map((number:number, index: number) => (<Ball key={index} number={number} />))}
+          <Ball number={numbers[0]} />
+          <Ball number={numbers[1]} />
+          <Ball number={numbers[2]} />
+          <Ball number={numbers[3]} />
+          <Ball number={numbers[4]} />
         </div>
 
         <div>
